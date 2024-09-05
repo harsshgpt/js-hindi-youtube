@@ -13,3 +13,20 @@ const id = Symbol('123')
 constmyFunction = function(){
      console.log("helo world")
 }
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//memory types
+//stack memory(primitive)(copy)
+//heap memory(non primitive)(refrence)
+
+let myYoutubename ="harsh"
+let temp = myYoutubename;
+temp = "chai lelo"
+console.log(temp)
+console.log(myYoutubename)
+let userone={
+    email: "harsh.com",
+    upi : "fshdifhsd"
+}
+console.log(userone.email)
