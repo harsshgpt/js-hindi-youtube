@@ -1,17 +1,17 @@
-// const score = 400
+const score = 400
 // console.log(score)
 
-// const balance = new Number(2000.21231)
+const balance = new Number(2000.21231)
 // console.log(balance);
 
 // console.log(balance.toString().length)
 // console.log(balance.toFixed(2))
 
-// const othernumber = 534.565564;
+const othernumber = 534.565564;
 
 
 // console.log(othernumber.toPrecision(3))
-// const hund = 100000
+const hund = 100000
 // console.log(hund.toLocaleString('en-IN'))
 
 //++++++++++++++++++++ MATH's +++++++++++++++++++++++++++
