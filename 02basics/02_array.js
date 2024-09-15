@@ -14,3 +14,12 @@ console.log(all_heros);
 
 const heros = [...marvel_hero,...dc_hero]; //it works like concat but it can add multiple array instead of 2 arrays
 console.log(heros);
+
+// now we are gonna learn about flat operator it merges array in array syntax = flat(//depth)
+
+const harsh = [2,4,5,64,[4,5,6],7,8[78,45,454[12,65,65,87,987,654]]];
+const flatharsh = harsh.flat(Infinity);
+console.log(flatharsh);
+
+
+
