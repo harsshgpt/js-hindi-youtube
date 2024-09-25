@@ -6,7 +6,7 @@ const dc_hero = ["shyam","saini","ji"];
 // console.log(marvel_hero[3])
 
 
-const all_heros = marvel_hero.concat(dc_hero); //it merges two array not like push 
+const all_heros = marvel_hero.concat(dc_hero); //it merges two array only not like push 
 
 console.log(all_heros);
 
