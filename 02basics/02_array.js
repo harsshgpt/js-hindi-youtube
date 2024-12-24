@@ -18,5 +18,11 @@ console.log(twt);
 //+++++++++++++INTERVIEW+++++++++++++++++
 
 console.log(Array.isArray("hitesh")); //isarray is used to check array is available or not
-console.log(Array.from("hitesh"));   //.from is used to creat an array
+console.log(Array.from("hitesh"));   //.from is used to creat an array  (WE CAN USE .OF ALSO)
 console.log(Array.from({name : "hitesh"})); //if it could not create an array it will return brackates
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1,score2,score3));
