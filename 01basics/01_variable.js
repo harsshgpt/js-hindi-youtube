@@ -1,3 +1,12 @@
+/*
+Imagine a house with rooms (blocks):
+Each room in the house has its own objects (variables).
+You can only use an object inside the room where it's kept. Once you leave the room, you can't access it anymore.
+
+A block in JavaScript is like a room. It is defined by {} (curly braces).
+Variables declared with let or const are like objects in the room:
+You can only use them inside the {} block where they were declared
+*/
 const accountId = 144553
 let accountEmail = "harshgupta@gmail.com"
 var accountPassword = " 1523546"
