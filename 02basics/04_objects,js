@@ -33,3 +33,14 @@ console.log(Object.entries(tinderuser))
 
 //to check any object has any property or not we use hasOwnProperty function like below
 console.log(tinderuser.hasOwnProperty('islogedin'))
+
+const jshindi = {
+    name : "js hindi youtive",
+    fee:0,
+    teacher :"hitesh sir"
+}
+
+//destructrue of any syntax
+//to extract any value from  object and use without pre instruction to avoid load
+const{fee : jsfee}=jshindi
+console.log(jsfee)
