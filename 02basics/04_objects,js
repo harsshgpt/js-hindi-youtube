@@ -1,0 +1,35 @@
+// const tinderuser = new Object()  it is singleton
+// const tinderuser = {} it is non singleton
+
+const tinderuser ={}
+tinderuser.id="123abc"
+tinderuser.name = "sam"
+tinderuser.islogedin = true
+
+// console.log(tinderuser)
+
+const user = {
+    name : {
+        username:{
+            firstname:"harsh",
+            lastname:"gupta"
+        }
+    }
+}
+// console.log(user.name.username.firstname)
+ 
+const target = {1:"a" , 2:"b"}
+const source = {3:"c", 4:"d"}
+
+// const merge = Object.assign({},target,source)
+const merge = {...target,...source}
+console.log(merge);
+
+console.log(tinderuser)
+//to get all keys, value and entries as an array we use object.,,,,() function
+console.log(Object.keys(tinderuser))
+console.log(Object.values(tinderuser))
+console.log(Object.entries(tinderuser))
+
+//to check any object has any property or not we use hasOwnProperty function like below
+console.log(tinderuser.hasOwnProperty('islogedin'))
