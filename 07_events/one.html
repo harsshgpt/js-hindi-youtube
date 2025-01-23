@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>async js</title>
+    <title>Html Events</title>
 </head>
-<body>
-     <h1>Harsh</h1>
-     <button>Stop</button>
+<body style = "background-color: rgb(53, 53, 53); color: aliceblue;">
+    <h2 id = "text">Images</h2>
+    <ul id ="images">
+        <li><img widgth = "200px" id = "focus" src = "https://i.pinimg.com/236x/50/c4/42/50c442910809df27d4a057863e12386e.jpg" alt = ""></li>
+        <li><img widgth = "200px" id = "krsna" src = "https://i.pinimg.com/236x/a4/60/fc/a460fc208da8d26bcdddf01c6912cc34.jpg" alt = ""></li>
+        <li><img widgth = "200px" id = "car" src = "https://i.pinimg.com/236x/7e/ef/7f/7eef7f803da14e42a0cbbd1ee534b4fa.jpg" alt = ""></li>
+        <li><img widgth = "200px" id = "lamp" src = "https://i.pinimg.com/236x/69/ff/fb/69fffb32570b9c73c2081d60c341a274.jpg" alt = ""></li>
+        <li><img widgth = "200px" id = "bike" src = "https://i.pinimg.com/474x/6f/a7/f8/6fa7f8cd27fe38603c3328be76d36e00.jpg" alt = "" ></li>
+        <li ><a id = "google" style="color: aliceblue;" href = "https://www.google.co.in/"> Google</a></li>
+    </ul>
 </body>
+<script>
+    //addEventListener methode
+    // document.getElementById('car').addEventListener('click',function(e){
+    //     alert('car clicked again')
+    // },false)
+
+    //attach event methode
+    //jQuery-on used previously
+
+
+     //function(name)    to stop propogation after name elemnt use name.stoppropogation it stops runnimg after that like preventdefault
+
+     //event propogation +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //third parameter of event listener is deffault false
+    //third parameter like true or false is used for bubbling and  propogation like user wanna go top to bottom or bottom to top it depend on use case 
+    document.getElementById('images').addEventListener('click',function(e){
+        
+        console.log("clicked inside unordered list ")
+    })
+
+    // document.getElementById('car').addEventListener('click',function(e){
+    //     console.log("car clicked")
+    //     e.stopPropagation()
+    // })
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log("google clicked");
+        e.preventDefault()
+    })
+
+    document.querySelector("#images").addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeit = e.target.parentNode;
+            removeit.remove()
+        }
+        
+    })
+
+    
+</script>
 </html>
