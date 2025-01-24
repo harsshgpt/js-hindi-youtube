@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId = null; // To store the interval ID
+
+    const sayDate = function () {
+        console.log("Hi", Date.now());
+    };
+
+    // Start button functionality
+    document.querySelector('#start').addEventListener('click', function () {
+        if (!intervalId) { // Only start if it's not already running
+            intervalId = setInterval(sayDate, 1000);
+        }
+    });
+
+    // Stop button functionality
+    document.querySelector('#stop').addEventListener('click', function () {
+        if (intervalId) { // Clear the interval if it exists
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    });
+</script>
+</html>

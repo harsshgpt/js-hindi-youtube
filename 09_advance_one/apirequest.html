@@ -1,0 +1,80 @@
+<!-- api is a medium to maintain connection between two types of system  -->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .id-card {
+            width: 300px;
+            height: 180px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .id-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .id-card .details {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+        .id-card .details h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .id-card .details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .count {
+            font-size: 14px;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body style="background-color:#212121 ;">
+    <div class="id-card">
+        <img src="https://via.placeholder.com/60" alt="Profile Photo">
+        <div class="details">
+            <h3>John Doe</h3>
+            <p>Role: Software Engineer</p>
+            <p>ID: 123456</p>
+            <p class="count">Projects Completed: 10</p>
+        </div>
+    </div>
+</body>
+<script>
+    let imgurl 
+    const requesturl = "https://api.github.com/users/hiteshchoudhary"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl)
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+        const detail = JSON.parse(this.responseText);
+        console.log( detail)
+        imgurl = detail.avatar_url
+    }
+}
+    xhr.send();
+</script> 
+</html>
