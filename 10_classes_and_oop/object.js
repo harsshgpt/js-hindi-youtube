@@ -1,8 +1,12 @@
-function multiplyby5 (num){
-    return num*5;
+function Setusername(username){
+    this.username = username;
 }
 
-multiplyby5.power = 2
-console.log(multiplyby5)
-console.log(multiplyby5(4))
-console.log(multiplyby5.prototype)
+function user (username,email,pass){
+    Setusername.call(this,username)
+    this.email = email;
+    this.pass = pass;
+}
+
+const use = new user("Harsh","harsh@google.com",123)
+console.log(use)
