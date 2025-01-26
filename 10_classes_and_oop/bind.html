@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class ReactClass {
+        constructor() {
+            this.library = "react";
+            this.server = "https://localhost/port303";
+
+            // Bind the event listener
+            document.querySelector('button').addEventListener('click', this.onclick.bind(this));
+        }
+
+        onclick() {
+            console.log("Button clicked");
+            console.log(this)
+        }
+    }
+
+    // Instantiate the class
+    new ReactClass();
+</script>
+</html>
