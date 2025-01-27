@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser and Lexical scoping</title>
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+    <button id="red">red</button>
+    
+</body>
+<script>
+    //lexical scoping :- function in function concept is lexical scoping ( like global and local scoping)
+    //clouser :- it like global scope and local scope sharing  but in between function parent function can share to child but child could not share with parent or another BROTHER NODE (ANOTHER CHILD)
+    function outer (){
+        let name = "Harsh"
+        function innerone(){
+            console.log(name)
+        }
+        innerone()
+    }
+    outer()
+</script>
+<script>
+    document.getElementById('green').onclick = function(){
+        document.body.style.backgroundColor='green'
+    }
+    document.getElementById('orange').addEventListener('mouseover',function(){
+        document.body.style.backgroundColor= 'orange';
+    })
+    document.getElementById ('red').addEventListener('mouseover',function(){
+        document.body.style.backgroundColor= 'red';
+    })
+</script>
+</html>
